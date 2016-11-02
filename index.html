@@ -1,65 +1,12 @@
-﻿<!Doctype html>
+<!Doctype html>
 <html>
 <head>
 	<title>Menu CSS jQuery</title>
 	<meta charset="utf-8">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script>
-	$(document).ready(function(){
-		$('#menu ul li').prepend('<span></span>');
-			$('#menu ul li').each(function(){
-				var texto= $(this).find('a').text();
-				$(this).find('span').text(texto);
-			});
-			$('#menu ul li').hover(function(){
-				$(this).find('span').stop().animate({
-					marginTop:"-40px"
-				},400);
-			},function(){
-				$(this).find('span').stop().animate({
-					marginTop:"0px"
-				},300);
-			});
-	});
-	</script>
-
-	<style>
-		body{background:black;
-			}
-		#menu{width:700px;
-			margin:auto;
-           	}
-		#menu ul{list-style:none;
-			font-size:18px;
-			font-family:"Hobo Std";
-			margin:0px;
-			padding:0px;
-			height:40px;
-			overflow:hidden;
-			}
-		#menu ul li{float:left;
-			}
-		#menu ul li a, #menu ul li span{width:100px;
-			padding:10px 20px;
-			height:18px;
-			color:#FFFFFF;
-			/*background:url("images/Degrade_img.jpg") repeat-x; */
-            background:red;
-			text-decoration:none;
-			overflow:hidden;
-			text-align:center;
-			}
-		#menu ul li span{
-			display:block;
-			cursor:pointer;
-			}
-		#menu ul li a{
-			float:left;
-			background:url("images/Degrade_img.jpg") repeat-x left bottom;
-			color:#000000;
-            height:10px;
-			}
-	</style>
+	<link rel="stylesheet" href="CSS/estilo.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+	<script type="text/javascript" src="JavaScript/jquery.js"></script>
+	<script type="text/javascript" src="JavaScript/arquivoJava.js"></script>
 </head>
 <body>
 	<div id="menu">
@@ -71,5 +18,6 @@
 			<li><a href="#">Contato</a></li>
 		</ul>
 	</div>
+	<h1></h1>
 </body>
 </html>
