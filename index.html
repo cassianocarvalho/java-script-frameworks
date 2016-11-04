@@ -8,15 +8,19 @@
 	$(document).ready(function(){
 		$("#menu ul li").css("color","green");
 		$('#menu ul li').prepend('<span></span>');
+			
 			$('#menu ul li').each(function(){
 				var texto= $(this).find('a').text();
 				$(this).find('span').text(texto);
 			});
+			
 			$('#menu ul li').hover(function(){
 				$(this).find('span').stop().animate({
 					marginLeft:"+42px"
-				},400);
-			},function(){
+				},500);
+			},
+			
+			function(){
 				$(this).find('span').stop().animate({
 					marginLeft:"0px"
 				},300);
@@ -36,7 +40,7 @@
            	}
 		#menu ul{list-style:none;
 			font-size:1.125em;
-			font-family:"Hobo Std";
+			font-family:"Georgia";
 			margin:0px;
 			padding:0px;
 			overflow:hidden;
