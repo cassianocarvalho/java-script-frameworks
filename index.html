@@ -1,12 +1,66 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Menu CSS jQuery</title>
+	<title>jQuery</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="CSS/estilo.css" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
-	<script type="text/javascript" src="JavaScript/jquery.js"></script>
-	<script type="text/javascript" src="JavaScript/arquivoJava.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#menu ul li").css("color","green");
+		$('#menu ul li').prepend('<span></span>');
+			$('#menu ul li').each(function(){
+				var texto= $(this).find('a').text();
+				$(this).find('span').text(texto);
+			});
+			$('#menu ul li').hover(function(){
+				$(this).find('span').stop().animate({
+					marginLeft:"+42px"
+				},400);
+			},function(){
+				$(this).find('span').stop().animate({
+					marginLeft:"0px"
+				},300);
+			});
+	});
+	</script>
+
+	<style>
+			body
+			{background:grey;
+			}
+		#menu{
+			width:700px;
+			height:100%;
+			margin:auto;
+			position:absolute;
+           	}
+		#menu ul{list-style:none;
+			font-size:1.125em;
+			font-family:"Hobo Std";
+			margin:0px;
+			padding:0px;
+			overflow:hidden;
+			}
+		#menu ul li a, #menu ul li span{width:100px;
+			padding:10px 20px;
+			height:18px;
+			
+            background:white;
+			text-decoration:none;
+			overflow:hidden;
+			text-align:center;
+			}
+		#menu ul li span{
+			display:block;
+			cursor:pointer;
+			}
+		#menu ul li a{
+			background:url("Degrade_img.jpg") repeat-x left bottom;
+			color:#000;
+            height:12px;
+			display:none;
+		}
+	</style>
 </head>
 <body>
 	<div id="menu">
@@ -18,6 +72,5 @@
 			<li><a href="#">Contato</a></li>
 		</ul>
 	</div>
-	<h1></h1>
 </body>
 </html>
